@@ -42,6 +42,9 @@ namespace FastFoodKasse
             var temp = new Artikel(n, p, c);
             list_items.Items.Add(temp);
             articleList.Add(temp);
+            
+            
+
         }
 
 
@@ -170,21 +173,7 @@ namespace FastFoodKasse
 
         }
 
-        
-
-        private void btn_checkout_Click(object sender, EventArgs e)
-        {
-            finishOrder();
-            articleList.Clear();
-            list_items.Items.Clear();
-        }
-
-        private void btn_rm_all_Click(object sender, EventArgs e)
-        {
-            articleList.Clear();
-            list_items.Items.Clear();
-        }
-
+      
         private void btn_rm_selected_Click(object sender, EventArgs e)
         {
 
@@ -193,6 +182,19 @@ namespace FastFoodKasse
         private void FastFoodKasse_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_rm_all_Click(object sender, EventArgs e)
+        {
+            articleList.Clear();
+            list_items.Items.Clear();
+        }
+
+        private void btn_checkout_Click(object sender, EventArgs e)
+        {
+            finishOrder();
+            articleList.Clear();
+            list_items.Items.Clear();
         }
     }
     // Klasse zur Zwischenspeicherung der Daten in Buttons und zur Benutzung in der Anwendung mit Anschließendem speichern in der History Tabelle
