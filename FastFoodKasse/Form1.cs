@@ -173,12 +173,6 @@ namespace FastFoodKasse
 
         }
 
-      
-        private void btn_rm_selected_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FastFoodKasse_Load(object sender, EventArgs e)
         {
 
@@ -195,6 +189,15 @@ namespace FastFoodKasse
             finishOrder();
             articleList.Clear();
             list_items.Items.Clear();
+        }
+
+        private void btn_rm_selected_Click(object sender, EventArgs e)
+        {
+            // Schleife um alle selektierten Elemente in der List Box zu löschen (Multiselect)
+            while (list_items.SelectedItems.Count > 0)
+            {
+                list_items.Items.Remove(list_items.SelectedItems[0]);
+            }
         }
     }
     // Klasse zur Zwischenspeicherung der Daten in Buttons und zur Benutzung in der Anwendung mit Anschließendem speichern in der History Tabelle

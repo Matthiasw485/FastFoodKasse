@@ -37,7 +37,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_customerpays = new System.Windows.Forms.Label();
             this.lbl_cashback = new System.Windows.Forms.Label();
-            this.btn_rm_selected = new System.Windows.Forms.Button();
             this.btn_rm_all = new MaterialSkin.Controls.MaterialFlatButton();
             this.calc_btn_0 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.calc_btn_1 = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -51,6 +50,7 @@
             this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.btn_checkout = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btn_rm_selected = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // list_items
@@ -58,6 +58,7 @@
             this.list_items.FormattingEnabled = true;
             this.list_items.Location = new System.Drawing.Point(969, 94);
             this.list_items.Name = "list_items";
+            this.list_items.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.list_items.Size = new System.Drawing.Size(180, 303);
             this.list_items.TabIndex = 1;
             // 
@@ -134,27 +135,16 @@
             this.lbl_cashback.TabIndex = 10;
             this.lbl_cashback.Text = "-";
             // 
-            // btn_rm_selected
-            // 
-            this.btn_rm_selected.Location = new System.Drawing.Point(856, 133);
-            this.btn_rm_selected.Name = "btn_rm_selected";
-            this.btn_rm_selected.Size = new System.Drawing.Size(107, 51);
-            this.btn_rm_selected.TabIndex = 11;
-            this.btn_rm_selected.Text = "Ausgewählten löschen";
-            this.btn_rm_selected.UseVisualStyleBackColor = true;
-            this.btn_rm_selected.Click += new System.EventHandler(this.btn_rm_selected_Click);
-            // 
             // btn_rm_all
             // 
-            this.btn_rm_all.AutoSize = true;
             this.btn_rm_all.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_rm_all.Depth = 0;
-            this.btn_rm_all.Location = new System.Drawing.Point(845, 361);
+            this.btn_rm_all.Location = new System.Drawing.Point(820, 361);
             this.btn_rm_all.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_rm_all.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_rm_all.Name = "btn_rm_all";
             this.btn_rm_all.Primary = false;
-            this.btn_rm_all.Size = new System.Drawing.Size(117, 36);
+            this.btn_rm_all.Size = new System.Drawing.Size(142, 36);
             this.btn_rm_all.TabIndex = 12;
             this.btn_rm_all.Text = "Alles Löschen";
             this.btn_rm_all.UseVisualStyleBackColor = true;
@@ -309,11 +299,27 @@
             this.btn_checkout.UseVisualStyleBackColor = true;
             this.btn_checkout.Click += new System.EventHandler(this.btn_checkout_Click);
             // 
+            // btn_rm_selected
+            // 
+            this.btn_rm_selected.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_rm_selected.Depth = 0;
+            this.btn_rm_selected.Location = new System.Drawing.Point(820, 313);
+            this.btn_rm_selected.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_rm_selected.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_rm_selected.Name = "btn_rm_selected";
+            this.btn_rm_selected.Primary = false;
+            this.btn_rm_selected.Size = new System.Drawing.Size(142, 36);
+            this.btn_rm_selected.TabIndex = 25;
+            this.btn_rm_selected.Text = "Auswahl löschen";
+            this.btn_rm_selected.UseVisualStyleBackColor = true;
+            this.btn_rm_selected.Click += new System.EventHandler(this.btn_rm_selected_Click);
+            // 
             // FastFoodKasse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1161, 811);
+            this.Controls.Add(this.btn_rm_selected);
             this.Controls.Add(this.btn_checkout);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.materialRaisedButton9);
@@ -327,7 +333,6 @@
             this.Controls.Add(this.calc_btn_1);
             this.Controls.Add(this.calc_btn_0);
             this.Controls.Add(this.btn_rm_all);
-            this.Controls.Add(this.btn_rm_selected);
             this.Controls.Add(this.lbl_cashback);
             this.Controls.Add(this.lbl_customerpays);
             this.Controls.Add(this.label4);
@@ -359,7 +364,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbl_customerpays;
         private System.Windows.Forms.Label lbl_cashback;
-        private System.Windows.Forms.Button btn_rm_selected;
         private MaterialSkin.Controls.MaterialFlatButton btn_rm_all;
         private MaterialSkin.Controls.MaterialRaisedButton calc_btn_0;
         private MaterialSkin.Controls.MaterialRaisedButton calc_btn_1;
@@ -373,6 +377,7 @@
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton9;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialFlatButton btn_checkout;
+        private MaterialSkin.Controls.MaterialFlatButton btn_rm_selected;
     }
 }
 
