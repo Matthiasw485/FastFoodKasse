@@ -50,7 +50,7 @@ namespace FastFoodKasse
 
 
         // Methode zum generieren von buttons. Es werden einige Werte mitgegeben: Zwischenabstände, Offset, Namen Array, Preis Array (Arrays werden durchgeloopt und ausgelesen)
-        private void generateButtons(int yOffset, int xOffset, string[] names, float[] prices,string[] category, int height, int width, int xMargin = 0, int yMargin = 0)
+        private void generateButtons(int yOffset, int xOffset, string[] names, float[] prices,string[] category, byte[] images, int height, int width, int xMargin = 0, int yMargin = 0)
         {
             int xCount = 0;
             int yCount = 0;
@@ -110,6 +110,9 @@ namespace FastFoodKasse
             List<string> names = new List<string>();
             List<float> prices = new List<float>();
             List<string> category = new List<string>();
+            List<byte> images = new List<byte>();
+
+            
 
             //Neue Datenbankverbindung
             using (var connection = new MySql.Data.MySqlClient.MySqlConnection("server=localhost;uid=itt35;pwd=itt35;database=kasse"))
@@ -118,7 +121,7 @@ namespace FastFoodKasse
                 {
                     connection.Open();
                     // SQL Query
-                    command.CommandText = "Select item_name,item_price,item_category FROM items";
+                    command.CommandText = "Select item_name,item_price,item_category, item_image FROM items";
                     using (var reader = command.ExecuteReader())
                     {
                         while (reader.Read())
@@ -126,6 +129,7 @@ namespace FastFoodKasse
                             names.Add(reader.GetString(0));
                             prices.Add(float.Parse(reader.GetString(1)));
                             category.Add(reader.GetString(2));
+                            images.Add(reader.GetByte(3));
                         }
                     }
                 }
@@ -137,6 +141,7 @@ namespace FastFoodKasse
                 names: names.ToArray(),
                 prices: prices.ToArray(),
                 category: category.ToArray(),
+                images: images.ToArray(),
                 height: 110,
                 width: 110,
                 xMargin: 5,

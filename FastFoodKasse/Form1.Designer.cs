@@ -292,7 +292,7 @@
             this.btn_checkout.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_checkout.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_checkout.Name = "btn_checkout";
-            this.btn_checkout.Primary = false;
+            this.btn_checkout.Primary = true;
             this.btn_checkout.Size = new System.Drawing.Size(189, 36);
             this.btn_checkout.TabIndex = 24;
             this.btn_checkout.Text = "Bestellung abschließen";
