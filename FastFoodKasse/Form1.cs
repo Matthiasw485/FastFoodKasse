@@ -150,7 +150,6 @@ namespace FastFoodKasse
         }
 
         // Methode zur speicherung aktuell beendeter Bestellungen in der Datenbank Tabelle "History" wenn abgeschlossen
-        // !!! Hier fehlt noch die Berechnung der Mehrwertsteuer (spalte vat_tax in MySQL) !!!
         private void finishOrder()
         {
             using (var connection = new MySql.Data.MySqlClient.MySqlConnection("server=localhost;uid=itt35;pwd=itt35;database=kasse"))
