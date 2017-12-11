@@ -18,6 +18,9 @@ namespace FastFoodKasse
         private List<Artikel> articleList;
         private int bestCounter = 0;
 
+        //Public Var Summe
+        public float sum;
+
         //Intialisierung der Methoden
         public FastFoodKasse()
         {
@@ -42,15 +45,15 @@ namespace FastFoodKasse
             var temp = new Artikel(n, p, c);
             list_items.Items.Add(temp);
             articleList.Add(temp);
-            
-            
 
+            sum += p;
+            lbl_sum.Text = sum.ToString();
         }
 
 
 
         // Methode zum generieren von buttons. Es werden einige Werte mitgegeben: Zwischenabstände, Offset, Namen Array, Preis Array (Arrays werden durchgeloopt und ausgelesen)
-        private void generateButtons(int yOffset, int xOffset, string[] names, float[] prices,string[] category, byte[] images, int height, int width, int xMargin = 0, int yMargin = 0)
+        private void generateButtons(int yOffset, int xOffset, string[] names, float[] prices,string[] category, int height, int width, int xMargin = 0, int yMargin = 0)
         {
             int xCount = 0;
             int yCount = 0;
@@ -104,24 +107,22 @@ namespace FastFoodKasse
             }
         }
 
-        // Aufruf der "GenerateButtons"-Methode mit einer Verbindung zur Datenbank benutzung der Daten aus dieser Datenbank
+        //Generieren der Buttons mit Hilfe der Datenbank und der Methode "GenerateButtons"
         private void generateButtonsFromSQL()
         {
             List<string> names = new List<string>();
             List<float> prices = new List<float>();
             List<string> category = new List<string>();
-            List<byte> images = new List<byte>();
 
             
 
-            //Neue Datenbankverbindung
+            //Hier wird eine neue Datenbankverbindung aufgebaut
             using (var connection = new MySql.Data.MySqlClient.MySqlConnection("server=localhost;uid=itt35;pwd=itt35;database=kasse"))
             {
                 using (var command = connection.CreateCommand())
                 {
                     connection.Open();
-                    // SQL Query
-                    command.CommandText = "Select item_name,item_price,item_category, item_image FROM items";
+                    command.CommandText = "Select item_name,item_price,item_category FROM items";
                     using (var reader = command.ExecuteReader())
                     {
                         while (reader.Read())
@@ -129,7 +130,6 @@ namespace FastFoodKasse
                             names.Add(reader.GetString(0));
                             prices.Add(float.Parse(reader.GetString(1)));
                             category.Add(reader.GetString(2));
-                            images.Add(reader.GetByte(3));
                         }
                     }
                 }
@@ -141,7 +141,6 @@ namespace FastFoodKasse
                 names: names.ToArray(),
                 prices: prices.ToArray(),
                 category: category.ToArray(),
-                images: images.ToArray(),
                 height: 110,
                 width: 110,
                 xMargin: 5,
@@ -151,9 +150,7 @@ namespace FastFoodKasse
         }
 
         // Methode zur speicherung aktuell beendeter Bestellungen in der Datenbank Tabelle "History" wenn abgeschlossen
-
         // !!! Hier fehlt noch die Berechnung der Mehrwertsteuer (spalte vat_tax in MySQL) !!!
-
         private void finishOrder()
         {
             using (var connection = new MySql.Data.MySqlClient.MySqlConnection("server=localhost;uid=itt35;pwd=itt35;database=kasse"))
@@ -187,6 +184,8 @@ namespace FastFoodKasse
         {
             articleList.Clear();
             list_items.Items.Clear();
+            sum = 0;
+            lbl_sum.Text = sum.ToString();
         }
 
         private void btn_checkout_Click(object sender, EventArgs e)
@@ -202,7 +201,66 @@ namespace FastFoodKasse
             while (list_items.SelectedItems.Count > 0)
             {
                 list_items.Items.Remove(list_items.SelectedItems[0]);
+                sum -= (float)list_items.SelectedItems[0];
+                lbl_sum.Text = sum.ToString();
             }
+        }
+
+        // Rechner Buttons
+        private void calc_btn_0_Click(object sender, EventArgs e)
+        {
+            calc_txt.Text += "0";
+        }
+        private void calc_btn_1_Click(object sender, EventArgs e)
+        {
+            calc_txt.Text += "1";
+        }
+        private void calc_btn_2_Click(object sender, EventArgs e)
+        {
+            calc_txt.Text += "2";
+        }
+        private void calc_btn_3_Click(object sender, EventArgs e)
+        {
+            calc_txt.Text += "3";
+        }
+        private void calc_btn_4_Click(object sender, EventArgs e)
+        {
+            calc_txt.Text += "4";
+        }
+        private void calc_btn_5_Click(object sender, EventArgs e)
+        {
+            calc_txt.Text += "5";
+        }
+        private void calc_btn_6_Click(object sender, EventArgs e)
+        {
+            calc_txt.Text += "6";
+        }
+        private void calc_btn_7_Click(object sender, EventArgs e)
+        {
+            calc_txt.Text += "7";
+        }
+        private void calc_btn_8_Click(object sender, EventArgs e)
+        {
+            calc_txt.Text += "8";
+        }
+        private void calc_btn_9_Click(object sender, EventArgs e)
+        {
+            calc_txt.Text += "9";
+        }
+        private void calc_del_Click(object sender, EventArgs e)
+        {
+            calc_txt.Text = "";
+        }
+        private void calc_btn_dot_Click(object sender, EventArgs e)
+        {
+            calc_txt.Text += ".";
+        }
+
+        private void btn_costumer_pays_Click(object sender, EventArgs e)
+        {
+            lbl_customerpays.Text = calc_txt.Text + " €";
+            float cashback = (float.Parse(calc_txt.Text)) - sum;
+            lbl_cashback.Text = cashback.ToString() + " €";
         }
     }
     // Klasse zur Zwischenspeicherung der Daten in Buttons und zur Benutzung in der Anwendung mit Anschließendem speichern in der History Tabelle

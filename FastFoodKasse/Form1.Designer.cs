@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_sum = new System.Windows.Forms.Label();
-            this.btn_showprice = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_customerpays = new System.Windows.Forms.Label();
@@ -40,17 +39,20 @@
             this.btn_rm_all = new MaterialSkin.Controls.MaterialFlatButton();
             this.calc_btn_0 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.calc_btn_1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.calc_btn_4 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.calc_btn_7 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.calc_btn_8 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.calc_btn_9 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.calc_btn_5 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.calc_btn_6 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.calc_btn_2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.calc_btn_3 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btn_checkout = new MaterialSkin.Controls.MaterialFlatButton();
             this.btn_rm_selected = new MaterialSkin.Controls.MaterialFlatButton();
+            this.calc_txt = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.calc_del = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.calc_btn_dot = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btn_costumer_pays = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // list_items
@@ -90,15 +92,6 @@
             this.lbl_sum.TabIndex = 4;
             this.lbl_sum.Text = "-";
             // 
-            // btn_showprice
-            // 
-            this.btn_showprice.Location = new System.Drawing.Point(969, 516);
-            this.btn_showprice.Name = "btn_showprice";
-            this.btn_showprice.Size = new System.Drawing.Size(180, 47);
-            this.btn_showprice.TabIndex = 6;
-            this.btn_showprice.Text = "Kunde bezahlt";
-            this.btn_showprice.UseVisualStyleBackColor = true;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -137,6 +130,7 @@
             // 
             // btn_rm_all
             // 
+            this.btn_rm_all.AutoSize = true;
             this.btn_rm_all.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_rm_all.Depth = 0;
             this.btn_rm_all.Location = new System.Drawing.Point(820, 361);
@@ -144,7 +138,7 @@
             this.btn_rm_all.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_rm_all.Name = "btn_rm_all";
             this.btn_rm_all.Primary = false;
-            this.btn_rm_all.Size = new System.Drawing.Size(142, 36);
+            this.btn_rm_all.Size = new System.Drawing.Size(117, 36);
             this.btn_rm_all.TabIndex = 12;
             this.btn_rm_all.Text = "Alles Löschen";
             this.btn_rm_all.UseVisualStyleBackColor = true;
@@ -153,7 +147,7 @@
             // calc_btn_0
             // 
             this.calc_btn_0.Depth = 0;
-            this.calc_btn_0.Location = new System.Drawing.Point(846, 753);
+            this.calc_btn_0.Location = new System.Drawing.Point(973, 766);
             this.calc_btn_0.MouseState = MaterialSkin.MouseState.HOVER;
             this.calc_btn_0.Name = "calc_btn_0";
             this.calc_btn_0.Primary = true;
@@ -161,11 +155,12 @@
             this.calc_btn_0.TabIndex = 13;
             this.calc_btn_0.Text = "0";
             this.calc_btn_0.UseVisualStyleBackColor = true;
+            this.calc_btn_0.Click += new System.EventHandler(this.calc_btn_0_Click);
             // 
             // calc_btn_1
             // 
             this.calc_btn_1.Depth = 0;
-            this.calc_btn_1.Location = new System.Drawing.Point(846, 697);
+            this.calc_btn_1.Location = new System.Drawing.Point(973, 710);
             this.calc_btn_1.MouseState = MaterialSkin.MouseState.HOVER;
             this.calc_btn_1.Name = "calc_btn_1";
             this.calc_btn_1.Primary = true;
@@ -173,115 +168,111 @@
             this.calc_btn_1.TabIndex = 14;
             this.calc_btn_1.Text = "1";
             this.calc_btn_1.UseVisualStyleBackColor = true;
+            this.calc_btn_1.Click += new System.EventHandler(this.calc_btn_1_Click);
             // 
-            // materialRaisedButton2
+            // calc_btn_4
             // 
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(846, 641);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(50, 50);
-            this.materialRaisedButton2.TabIndex = 15;
-            this.materialRaisedButton2.Text = "4";
-            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.calc_btn_4.Depth = 0;
+            this.calc_btn_4.Location = new System.Drawing.Point(973, 654);
+            this.calc_btn_4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.calc_btn_4.Name = "calc_btn_4";
+            this.calc_btn_4.Primary = true;
+            this.calc_btn_4.Size = new System.Drawing.Size(50, 50);
+            this.calc_btn_4.TabIndex = 15;
+            this.calc_btn_4.Text = "4";
+            this.calc_btn_4.UseVisualStyleBackColor = true;
+            this.calc_btn_4.Click += new System.EventHandler(this.calc_btn_4_Click);
             // 
-            // materialRaisedButton3
+            // calc_btn_7
             // 
-            this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(846, 585);
-            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton3.Name = "materialRaisedButton3";
-            this.materialRaisedButton3.Primary = true;
-            this.materialRaisedButton3.Size = new System.Drawing.Size(50, 50);
-            this.materialRaisedButton3.TabIndex = 16;
-            this.materialRaisedButton3.Text = "7";
-            this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            this.calc_btn_7.Depth = 0;
+            this.calc_btn_7.Location = new System.Drawing.Point(973, 598);
+            this.calc_btn_7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.calc_btn_7.Name = "calc_btn_7";
+            this.calc_btn_7.Primary = true;
+            this.calc_btn_7.Size = new System.Drawing.Size(50, 50);
+            this.calc_btn_7.TabIndex = 16;
+            this.calc_btn_7.Text = "7";
+            this.calc_btn_7.UseVisualStyleBackColor = true;
+            this.calc_btn_7.Click += new System.EventHandler(this.calc_btn_7_Click);
             // 
-            // materialRaisedButton4
+            // calc_btn_8
             // 
-            this.materialRaisedButton4.Depth = 0;
-            this.materialRaisedButton4.Location = new System.Drawing.Point(902, 585);
-            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton4.Name = "materialRaisedButton4";
-            this.materialRaisedButton4.Primary = true;
-            this.materialRaisedButton4.Size = new System.Drawing.Size(50, 50);
-            this.materialRaisedButton4.TabIndex = 17;
-            this.materialRaisedButton4.Text = "8";
-            this.materialRaisedButton4.UseVisualStyleBackColor = true;
+            this.calc_btn_8.Depth = 0;
+            this.calc_btn_8.Location = new System.Drawing.Point(1029, 598);
+            this.calc_btn_8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.calc_btn_8.Name = "calc_btn_8";
+            this.calc_btn_8.Primary = true;
+            this.calc_btn_8.Size = new System.Drawing.Size(50, 50);
+            this.calc_btn_8.TabIndex = 17;
+            this.calc_btn_8.Text = "8";
+            this.calc_btn_8.UseVisualStyleBackColor = true;
+            this.calc_btn_8.Click += new System.EventHandler(this.calc_btn_8_Click);
             // 
-            // materialRaisedButton5
+            // calc_btn_9
             // 
-            this.materialRaisedButton5.Depth = 0;
-            this.materialRaisedButton5.Location = new System.Drawing.Point(958, 585);
-            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton5.Name = "materialRaisedButton5";
-            this.materialRaisedButton5.Primary = true;
-            this.materialRaisedButton5.Size = new System.Drawing.Size(50, 50);
-            this.materialRaisedButton5.TabIndex = 18;
-            this.materialRaisedButton5.Text = "9";
-            this.materialRaisedButton5.UseVisualStyleBackColor = true;
+            this.calc_btn_9.Depth = 0;
+            this.calc_btn_9.Location = new System.Drawing.Point(1085, 598);
+            this.calc_btn_9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.calc_btn_9.Name = "calc_btn_9";
+            this.calc_btn_9.Primary = true;
+            this.calc_btn_9.Size = new System.Drawing.Size(50, 50);
+            this.calc_btn_9.TabIndex = 18;
+            this.calc_btn_9.Text = "9";
+            this.calc_btn_9.UseVisualStyleBackColor = true;
+            this.calc_btn_9.Click += new System.EventHandler(this.calc_btn_9_Click);
             // 
-            // materialRaisedButton6
+            // calc_btn_5
             // 
-            this.materialRaisedButton6.Depth = 0;
-            this.materialRaisedButton6.Location = new System.Drawing.Point(902, 641);
-            this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton6.Name = "materialRaisedButton6";
-            this.materialRaisedButton6.Primary = true;
-            this.materialRaisedButton6.Size = new System.Drawing.Size(50, 50);
-            this.materialRaisedButton6.TabIndex = 19;
-            this.materialRaisedButton6.Text = "5";
-            this.materialRaisedButton6.UseVisualStyleBackColor = true;
+            this.calc_btn_5.Depth = 0;
+            this.calc_btn_5.Location = new System.Drawing.Point(1029, 654);
+            this.calc_btn_5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.calc_btn_5.Name = "calc_btn_5";
+            this.calc_btn_5.Primary = true;
+            this.calc_btn_5.Size = new System.Drawing.Size(50, 50);
+            this.calc_btn_5.TabIndex = 19;
+            this.calc_btn_5.Text = "5";
+            this.calc_btn_5.UseVisualStyleBackColor = true;
+            this.calc_btn_5.Click += new System.EventHandler(this.calc_btn_5_Click);
             // 
-            // materialRaisedButton7
+            // calc_btn_6
             // 
-            this.materialRaisedButton7.Depth = 0;
-            this.materialRaisedButton7.Location = new System.Drawing.Point(958, 641);
-            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton7.Name = "materialRaisedButton7";
-            this.materialRaisedButton7.Primary = true;
-            this.materialRaisedButton7.Size = new System.Drawing.Size(50, 50);
-            this.materialRaisedButton7.TabIndex = 20;
-            this.materialRaisedButton7.Text = "6";
-            this.materialRaisedButton7.UseVisualStyleBackColor = true;
+            this.calc_btn_6.Depth = 0;
+            this.calc_btn_6.Location = new System.Drawing.Point(1085, 654);
+            this.calc_btn_6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.calc_btn_6.Name = "calc_btn_6";
+            this.calc_btn_6.Primary = true;
+            this.calc_btn_6.Size = new System.Drawing.Size(50, 50);
+            this.calc_btn_6.TabIndex = 20;
+            this.calc_btn_6.Text = "6";
+            this.calc_btn_6.UseVisualStyleBackColor = true;
+            this.calc_btn_6.Click += new System.EventHandler(this.calc_btn_6_Click);
             // 
-            // materialRaisedButton8
+            // calc_btn_2
             // 
-            this.materialRaisedButton8.Depth = 0;
-            this.materialRaisedButton8.Location = new System.Drawing.Point(902, 697);
-            this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton8.Name = "materialRaisedButton8";
-            this.materialRaisedButton8.Primary = true;
-            this.materialRaisedButton8.Size = new System.Drawing.Size(50, 50);
-            this.materialRaisedButton8.TabIndex = 21;
-            this.materialRaisedButton8.Text = "2";
-            this.materialRaisedButton8.UseVisualStyleBackColor = true;
+            this.calc_btn_2.Depth = 0;
+            this.calc_btn_2.Location = new System.Drawing.Point(1029, 710);
+            this.calc_btn_2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.calc_btn_2.Name = "calc_btn_2";
+            this.calc_btn_2.Primary = true;
+            this.calc_btn_2.Size = new System.Drawing.Size(50, 50);
+            this.calc_btn_2.TabIndex = 21;
+            this.calc_btn_2.Text = "2";
+            this.calc_btn_2.UseVisualStyleBackColor = true;
+            this.calc_btn_2.Click += new System.EventHandler(this.calc_btn_2_Click);
             // 
-            // materialRaisedButton9
+            // calc_btn_3
             // 
-            this.materialRaisedButton9.Depth = 0;
-            this.materialRaisedButton9.Location = new System.Drawing.Point(958, 697);
-            this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton9.Name = "materialRaisedButton9";
-            this.materialRaisedButton9.Primary = true;
-            this.materialRaisedButton9.Size = new System.Drawing.Size(50, 50);
-            this.materialRaisedButton9.TabIndex = 22;
-            this.materialRaisedButton9.Text = "3";
-            this.materialRaisedButton9.UseVisualStyleBackColor = true;
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(842, 563);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(63, 19);
-            this.materialLabel1.TabIndex = 23;
-            this.materialLabel1.Text = "Rechner";
+            this.calc_btn_3.Depth = 0;
+            this.calc_btn_3.Location = new System.Drawing.Point(1085, 710);
+            this.calc_btn_3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.calc_btn_3.Name = "calc_btn_3";
+            this.calc_btn_3.Primary = true;
+            this.calc_btn_3.Size = new System.Drawing.Size(50, 50);
+            this.calc_btn_3.TabIndex = 22;
+            this.calc_btn_3.Text = "3";
+            this.calc_btn_3.UseVisualStyleBackColor = true;
+            this.calc_btn_3.Click += new System.EventHandler(this.calc_btn_3_Click);
             // 
             // btn_checkout
             // 
@@ -301,6 +292,7 @@
             // 
             // btn_rm_selected
             // 
+            this.btn_rm_selected.AutoSize = true;
             this.btn_rm_selected.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_rm_selected.Depth = 0;
             this.btn_rm_selected.Location = new System.Drawing.Point(820, 313);
@@ -314,22 +306,82 @@
             this.btn_rm_selected.UseVisualStyleBackColor = true;
             this.btn_rm_selected.Click += new System.EventHandler(this.btn_rm_selected_Click);
             // 
+            // calc_txt
+            // 
+            this.calc_txt.Depth = 0;
+            this.calc_txt.Hint = "";
+            this.calc_txt.Location = new System.Drawing.Point(973, 569);
+            this.calc_txt.MouseState = MaterialSkin.MouseState.HOVER;
+            this.calc_txt.Name = "calc_txt";
+            this.calc_txt.PasswordChar = '\0';
+            this.calc_txt.SelectedText = "";
+            this.calc_txt.SelectionLength = 0;
+            this.calc_txt.SelectionStart = 0;
+            this.calc_txt.Size = new System.Drawing.Size(162, 23);
+            this.calc_txt.TabIndex = 26;
+            this.calc_txt.UseSystemPasswordChar = false;
+            // 
+            // calc_del
+            // 
+            this.calc_del.Depth = 0;
+            this.calc_del.Location = new System.Drawing.Point(1085, 766);
+            this.calc_del.MouseState = MaterialSkin.MouseState.HOVER;
+            this.calc_del.Name = "calc_del";
+            this.calc_del.Primary = true;
+            this.calc_del.Size = new System.Drawing.Size(50, 50);
+            this.calc_del.TabIndex = 27;
+            this.calc_del.Text = "DEL";
+            this.calc_del.UseVisualStyleBackColor = true;
+            this.calc_del.Click += new System.EventHandler(this.calc_del_Click);
+            // 
+            // calc_btn_dot
+            // 
+            this.calc_btn_dot.Depth = 0;
+            this.calc_btn_dot.Location = new System.Drawing.Point(1029, 766);
+            this.calc_btn_dot.MouseState = MaterialSkin.MouseState.HOVER;
+            this.calc_btn_dot.Name = "calc_btn_dot";
+            this.calc_btn_dot.Primary = true;
+            this.calc_btn_dot.Size = new System.Drawing.Size(50, 50);
+            this.calc_btn_dot.TabIndex = 28;
+            this.calc_btn_dot.Text = ".";
+            this.calc_btn_dot.UseVisualStyleBackColor = true;
+            this.calc_btn_dot.Click += new System.EventHandler(this.calc_btn_dot_Click);
+            // 
+            // btn_costumer_pays
+            // 
+            this.btn_costumer_pays.AutoSize = true;
+            this.btn_costumer_pays.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_costumer_pays.Depth = 0;
+            this.btn_costumer_pays.Location = new System.Drawing.Point(995, 519);
+            this.btn_costumer_pays.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_costumer_pays.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_costumer_pays.Name = "btn_costumer_pays";
+            this.btn_costumer_pays.Primary = false;
+            this.btn_costumer_pays.Size = new System.Drawing.Size(119, 36);
+            this.btn_costumer_pays.TabIndex = 29;
+            this.btn_costumer_pays.Text = "Kunde bezahlt";
+            this.btn_costumer_pays.UseVisualStyleBackColor = true;
+            this.btn_costumer_pays.Click += new System.EventHandler(this.btn_costumer_pays_Click);
+            // 
             // FastFoodKasse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1161, 811);
+            this.ClientSize = new System.Drawing.Size(1161, 826);
+            this.Controls.Add(this.btn_costumer_pays);
+            this.Controls.Add(this.calc_btn_dot);
+            this.Controls.Add(this.calc_del);
+            this.Controls.Add(this.calc_txt);
             this.Controls.Add(this.btn_rm_selected);
             this.Controls.Add(this.btn_checkout);
-            this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.materialRaisedButton9);
-            this.Controls.Add(this.materialRaisedButton8);
-            this.Controls.Add(this.materialRaisedButton7);
-            this.Controls.Add(this.materialRaisedButton6);
-            this.Controls.Add(this.materialRaisedButton5);
-            this.Controls.Add(this.materialRaisedButton4);
-            this.Controls.Add(this.materialRaisedButton3);
-            this.Controls.Add(this.materialRaisedButton2);
+            this.Controls.Add(this.calc_btn_3);
+            this.Controls.Add(this.calc_btn_2);
+            this.Controls.Add(this.calc_btn_6);
+            this.Controls.Add(this.calc_btn_5);
+            this.Controls.Add(this.calc_btn_9);
+            this.Controls.Add(this.calc_btn_8);
+            this.Controls.Add(this.calc_btn_7);
+            this.Controls.Add(this.calc_btn_4);
             this.Controls.Add(this.calc_btn_1);
             this.Controls.Add(this.calc_btn_0);
             this.Controls.Add(this.btn_rm_all);
@@ -337,7 +389,6 @@
             this.Controls.Add(this.lbl_customerpays);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btn_showprice);
             this.Controls.Add(this.lbl_sum);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -359,7 +410,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_sum;
-        private System.Windows.Forms.Button btn_showprice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbl_customerpays;
@@ -367,17 +417,20 @@
         private MaterialSkin.Controls.MaterialFlatButton btn_rm_all;
         private MaterialSkin.Controls.MaterialRaisedButton calc_btn_0;
         private MaterialSkin.Controls.MaterialRaisedButton calc_btn_1;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton4;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton6;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton7;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton8;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton9;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialRaisedButton calc_btn_4;
+        private MaterialSkin.Controls.MaterialRaisedButton calc_btn_7;
+        private MaterialSkin.Controls.MaterialRaisedButton calc_btn_8;
+        private MaterialSkin.Controls.MaterialRaisedButton calc_btn_9;
+        private MaterialSkin.Controls.MaterialRaisedButton calc_btn_5;
+        private MaterialSkin.Controls.MaterialRaisedButton calc_btn_6;
+        private MaterialSkin.Controls.MaterialRaisedButton calc_btn_2;
+        private MaterialSkin.Controls.MaterialRaisedButton calc_btn_3;
         private MaterialSkin.Controls.MaterialFlatButton btn_checkout;
         private MaterialSkin.Controls.MaterialFlatButton btn_rm_selected;
+        private MaterialSkin.Controls.MaterialSingleLineTextField calc_txt;
+        private MaterialSkin.Controls.MaterialRaisedButton calc_del;
+        private MaterialSkin.Controls.MaterialRaisedButton calc_btn_dot;
+        private MaterialSkin.Controls.MaterialFlatButton btn_costumer_pays;
     }
 }
 
