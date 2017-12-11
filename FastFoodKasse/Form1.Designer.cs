@@ -147,7 +147,7 @@
             // calc_btn_0
             // 
             this.calc_btn_0.Depth = 0;
-            this.calc_btn_0.Location = new System.Drawing.Point(973, 766);
+            this.calc_btn_0.Location = new System.Drawing.Point(973, 677);
             this.calc_btn_0.MouseState = MaterialSkin.MouseState.HOVER;
             this.calc_btn_0.Name = "calc_btn_0";
             this.calc_btn_0.Primary = true;
@@ -160,7 +160,7 @@
             // calc_btn_1
             // 
             this.calc_btn_1.Depth = 0;
-            this.calc_btn_1.Location = new System.Drawing.Point(973, 710);
+            this.calc_btn_1.Location = new System.Drawing.Point(973, 621);
             this.calc_btn_1.MouseState = MaterialSkin.MouseState.HOVER;
             this.calc_btn_1.Name = "calc_btn_1";
             this.calc_btn_1.Primary = true;
@@ -173,7 +173,7 @@
             // calc_btn_4
             // 
             this.calc_btn_4.Depth = 0;
-            this.calc_btn_4.Location = new System.Drawing.Point(973, 654);
+            this.calc_btn_4.Location = new System.Drawing.Point(973, 565);
             this.calc_btn_4.MouseState = MaterialSkin.MouseState.HOVER;
             this.calc_btn_4.Name = "calc_btn_4";
             this.calc_btn_4.Primary = true;
@@ -186,7 +186,7 @@
             // calc_btn_7
             // 
             this.calc_btn_7.Depth = 0;
-            this.calc_btn_7.Location = new System.Drawing.Point(973, 598);
+            this.calc_btn_7.Location = new System.Drawing.Point(973, 509);
             this.calc_btn_7.MouseState = MaterialSkin.MouseState.HOVER;
             this.calc_btn_7.Name = "calc_btn_7";
             this.calc_btn_7.Primary = true;
@@ -199,7 +199,7 @@
             // calc_btn_8
             // 
             this.calc_btn_8.Depth = 0;
-            this.calc_btn_8.Location = new System.Drawing.Point(1029, 598);
+            this.calc_btn_8.Location = new System.Drawing.Point(1029, 509);
             this.calc_btn_8.MouseState = MaterialSkin.MouseState.HOVER;
             this.calc_btn_8.Name = "calc_btn_8";
             this.calc_btn_8.Primary = true;
@@ -212,7 +212,7 @@
             // calc_btn_9
             // 
             this.calc_btn_9.Depth = 0;
-            this.calc_btn_9.Location = new System.Drawing.Point(1085, 598);
+            this.calc_btn_9.Location = new System.Drawing.Point(1085, 509);
             this.calc_btn_9.MouseState = MaterialSkin.MouseState.HOVER;
             this.calc_btn_9.Name = "calc_btn_9";
             this.calc_btn_9.Primary = true;
@@ -225,7 +225,7 @@
             // calc_btn_5
             // 
             this.calc_btn_5.Depth = 0;
-            this.calc_btn_5.Location = new System.Drawing.Point(1029, 654);
+            this.calc_btn_5.Location = new System.Drawing.Point(1029, 565);
             this.calc_btn_5.MouseState = MaterialSkin.MouseState.HOVER;
             this.calc_btn_5.Name = "calc_btn_5";
             this.calc_btn_5.Primary = true;
@@ -238,7 +238,7 @@
             // calc_btn_6
             // 
             this.calc_btn_6.Depth = 0;
-            this.calc_btn_6.Location = new System.Drawing.Point(1085, 654);
+            this.calc_btn_6.Location = new System.Drawing.Point(1085, 565);
             this.calc_btn_6.MouseState = MaterialSkin.MouseState.HOVER;
             this.calc_btn_6.Name = "calc_btn_6";
             this.calc_btn_6.Primary = true;
@@ -251,7 +251,7 @@
             // calc_btn_2
             // 
             this.calc_btn_2.Depth = 0;
-            this.calc_btn_2.Location = new System.Drawing.Point(1029, 710);
+            this.calc_btn_2.Location = new System.Drawing.Point(1029, 621);
             this.calc_btn_2.MouseState = MaterialSkin.MouseState.HOVER;
             this.calc_btn_2.Name = "calc_btn_2";
             this.calc_btn_2.Primary = true;
@@ -264,7 +264,7 @@
             // calc_btn_3
             // 
             this.calc_btn_3.Depth = 0;
-            this.calc_btn_3.Location = new System.Drawing.Point(1085, 710);
+            this.calc_btn_3.Location = new System.Drawing.Point(1085, 621);
             this.calc_btn_3.MouseState = MaterialSkin.MouseState.HOVER;
             this.calc_btn_3.Name = "calc_btn_3";
             this.calc_btn_3.Primary = true;
@@ -279,7 +279,7 @@
             this.btn_checkout.AutoSize = true;
             this.btn_checkout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_checkout.Depth = 0;
-            this.btn_checkout.Location = new System.Drawing.Point(960, 471);
+            this.btn_checkout.Location = new System.Drawing.Point(960, 784);
             this.btn_checkout.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_checkout.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_checkout.Name = "btn_checkout";
@@ -310,7 +310,7 @@
             // 
             this.calc_txt.Depth = 0;
             this.calc_txt.Hint = "";
-            this.calc_txt.Location = new System.Drawing.Point(973, 569);
+            this.calc_txt.Location = new System.Drawing.Point(973, 480);
             this.calc_txt.MouseState = MaterialSkin.MouseState.HOVER;
             this.calc_txt.Name = "calc_txt";
             this.calc_txt.PasswordChar = '\0';
@@ -324,7 +324,7 @@
             // calc_del
             // 
             this.calc_del.Depth = 0;
-            this.calc_del.Location = new System.Drawing.Point(1085, 766);
+            this.calc_del.Location = new System.Drawing.Point(1085, 677);
             this.calc_del.MouseState = MaterialSkin.MouseState.HOVER;
             this.calc_del.Name = "calc_del";
             this.calc_del.Primary = true;
@@ -337,7 +337,7 @@
             // calc_btn_dot
             // 
             this.calc_btn_dot.Depth = 0;
-            this.calc_btn_dot.Location = new System.Drawing.Point(1029, 766);
+            this.calc_btn_dot.Location = new System.Drawing.Point(1029, 677);
             this.calc_btn_dot.MouseState = MaterialSkin.MouseState.HOVER;
             this.calc_btn_dot.Name = "calc_btn_dot";
             this.calc_btn_dot.Primary = true;
@@ -352,14 +352,14 @@
             this.btn_costumer_pays.AutoSize = true;
             this.btn_costumer_pays.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_costumer_pays.Depth = 0;
-            this.btn_costumer_pays.Location = new System.Drawing.Point(995, 519);
+            this.btn_costumer_pays.Location = new System.Drawing.Point(990, 736);
             this.btn_costumer_pays.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_costumer_pays.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_costumer_pays.Name = "btn_costumer_pays";
             this.btn_costumer_pays.Primary = false;
-            this.btn_costumer_pays.Size = new System.Drawing.Size(119, 36);
+            this.btn_costumer_pays.Size = new System.Drawing.Size(136, 36);
             this.btn_costumer_pays.TabIndex = 29;
-            this.btn_costumer_pays.Text = "Kunde bezahlt";
+            this.btn_costumer_pays.Text = "Zahlung erfolgt";
             this.btn_costumer_pays.UseVisualStyleBackColor = true;
             this.btn_costumer_pays.Click += new System.EventHandler(this.btn_costumer_pays_Click);
             // 

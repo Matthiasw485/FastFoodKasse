@@ -56,10 +56,10 @@ CREATE TABLE `items` (
 
 INSERT INTO `items` (`IID`, `item_name`, `item_price`, `item_category`) VALUES
 (1, 'Hamburger', 4.5, 'burger'),
-(2, 'Cheeseburger', 5.5, 'burger'),
-(3, 'BBQ Bacon', 6, 'burger'),
-(4, 'Veggieburger', 5, 'burger'),
-(5, 'MegaDoubleStacker', 9.5, 'burger'),
+(2, 'Cheeseburger', 4.5, 'burger'),
+(3, 'BBQ Bacon Cheese', 7, 'burger'),
+(4, 'Veggieburger', 15, 'burger'),
+(5, 'Big Shak', 6.5, 'burger'),
 (6, 'Coke 0.5', 3, 'drink'),
 (7, 'Coke 0.4', 2, 'drink'),
 (8, 'Coke 0.3', 1.5, 'drink'),

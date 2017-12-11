@@ -160,8 +160,9 @@ namespace FastFoodKasse
                     connection.Open();
                     foreach (var a in articleList)
                     {
+                        double vat = a.Price * 0.19;
                         Console.WriteLine(a.Name);
-                        command.CommandText = $"INSERT INTO `history`(`order_ID`, `itemname`, `price`,  `vat_tax`) VALUES ({bestCounter}, '{a.Name}', {a.Price.ToString().Replace(',', '.')}, {a.Price.ToString().Replace(',', '.')})";
+                        command.CommandText = $"INSERT INTO `history`(`order_ID`, `itemname`, `price`,  `vat_tax`) VALUES ({bestCounter}, '{a.Name}', {a.Price.ToString().Replace(',', '.')}, {vat.ToString().Replace(',','.')})";
                         command.ExecuteNonQuery();
                     }
                     bestCounter++;
